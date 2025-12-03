@@ -29,6 +29,20 @@ docker push rishitha12/redis
 docker rm 028948c4429d
 docker rmi rishitha12/redis
 docker logout
+=====================================
+#minikube
+minikube start
+minikube ip
+minikube kubectl -- get pods -A
+kubectl create deployment mynginx --image=nginx
+kubectl get deployments
+kubectl get pods
+kubectl describe pods
+kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
+kubectl scale deployment mynginx --replicas=4
+kubectl get service mynginx
+kubectl port-forward svc/mynginx 8081:80
+==========================================
 
 
 
